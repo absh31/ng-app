@@ -1,0 +1,11 @@
+<input class="form-control" type="text" [(ngModel)]="serverName">
+<p>{{serverName}}</p>
+<button class="btn btn-primary" (click)="onServerCreated()" [disabled] = "!allowNewServer">
+    Add Server
+</button>
+<br>
+<p>{{serverCreated}}</p>
+<br>
+<p [innerText]="allowNewServer"></p>
+<br>
+<app-server></app-server>
